@@ -4,61 +4,182 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f7fa;
+            margin: 0;
+            padding: 0;
+            color: #333;
+        }
+
+        h1 {
+            text-align: center;
+            color: #4CAF50;
+            margin-top: 30px;
+        }
+
+        form {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        label {
+            font-size: 16px;
+            margin-bottom: 10px;
+            display: inline-block;
+            font-weight: bold;
+        }
+
+        input[type="text"] {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            box-sizing: border-box;
+            font-size: 14px;
+        }
+
+        input[type="radio"], input[type="checkbox"] {
+            margin-right: 10px;
+        }
+
+        .question-group {
+            margin-bottom: 20px;
+        }
+
+        .question-group input[type="radio"] {
+            margin-right: 10px;
+        }
+
+        hr {
+            margin: 20px 0;
+            border: 0;
+            border-top: 1px solid #eee;
+        }
+
+        .checkbox-group input[type="checkbox"] {
+            margin: 8px 10px 8px 0;
+        }
+
+        input[type="submit"] {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            padding: 12px 25px;
+            font-size: 16px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+
+        
+        @media (max-width: 600px) {
+            form {
+                padding: 15px;
+                margin: 10px;
+            }
+
+            input[type="text"] {
+                padding: 8px;
+            }
+
+            input[type="submit"] {
+                padding: 10px 20px;
+                font-size: 14px;
+            }
+
+            h1 {
+                font-size: 24px;
+            }
+        }
+    </style>
+</head>
+<body>
     <h1>Simple Quiz</h1>
 
     <form>
-        
-        
-            What is your Name?<br>
-            <input type="text" id="question1" name="answer1"placeholder="Enter Your Answer">
-            <br>Where do you live?<br>
-            
-            <input type="text" id="question2" name="answer2"placeholder="Enter Your Answer">
-            <br>How many brother/s you have?<br>
-            
-            <input type="text" id="question3" name="answer3"placeholder="Enter Your Answer">
-            <br>When is your birthdate?<br>
-            
-            <input type="text" id="question4" name="answer4"placeholder="Enter Your Answer">
-            <br>
-            <hr>
-        
+        <div class="question-group">
+            <label for="question1">What is your Name?</label>
+            <input type="text" id="question1" name="answer1" placeholder="Enter Your Answer">
+        </div>
 
-        
-            1. How often do you use Facebook?<br>
-           <input type="radio" name = "answer1">A. Multiple times a day<br>
-           <input type="radio" name = "answer1">B. Once a day<br>
-           <input type="radio" name = "answer1">C. A few times a week<br>
-           <input type="radio" name = "answer1">D. Once a week<br>
-           2. What do you primarily use Facebook for?<br>
-           <input type="radio" name = "answer2">A. Connecting with friends and family<br>
-           <input type="radio" name = "answer2">B. Watching videos or live streams<br>
-           <input type="radio" name = "answer2">C. Following news and current events<br>
-           <input type="radio" name = "answer2">D. Post my friend's pictures<br>
-           3. What do you do for a living?<br>
-           <input type="radio" name = "answer3">A. Chairman<br>
-           <input type="radio" name = "answer3">B. Carpenter<br>
-           <input type="radio" name = "answer3">C. Construction Worker<br>
-           <input type="radio" name = "answer3">D. Contractor
-            <br>
-            <hr>
-        
-             Where do you watch movie?<br>
-            <input type="checkbox">Netflix<br>
-            <input type="checkbox">Youtube<br>
-            <input type="checkbox">CornHub<br>
-            Favorite Genre?<br>
-            <input type="checkbox">Drama<br>
-            <input type="checkbox">Action<br>
-            <input type="checkbox">Anime<br>
-            Favorite Sport?<br>
-            <input type="checkbox">Basketball<br>
-            <input type="checkbox">Volleyball<br>
-            <input type="checkbox">Badminton<br>
+        <div class="question-group">
+            <label for="question2">Where do you live?</label>
+            <input type="text" id="question2" name="answer2" placeholder="Enter Your Answer">
+        </div>
 
-            <br><br>
+        <div class="question-group">
+            <label for="question3">How many brothers do you have?</label>
+            <input type="text" id="question3" name="answer3" placeholder="Enter Your Answer">
+        </div>
 
-        
-            <input type="submit" value="Submit Quiz">
-        
-    </form>
+        <div class="question-group">
+            <label for="question4">When is your birthdate?</label>
+            <input type="text" id="question4" name="answer4" placeholder="Enter Your Answer">
+        </div>
+
+        <hr>
+
+        <div class="question-group">
+            <label>1. How often do you use Facebook?</label><br>
+            <input type="radio" name="answer1"> A. Multiple times a day<br>
+            <input type="radio" name="answer1"> B. Once a day<br>
+            <input type="radio" name="answer1"> C. A few times a week<br>
+            <input type="radio" name="answer1"> D. Once a week<br>
+        </div>
+
+        <div class="question-group">
+            <label>2. What do you primarily use Facebook for?</label><br>
+            <input type="radio" name="answer2"> A. Connecting with friends and family<br>
+            <input type="radio" name="answer2"> B. Watching videos or live streams<br>
+            <input type="radio" name="answer2"> C. Following news and current events<br>
+            <input type="radio" name="answer2"> D. Post my friend's pictures<br>
+        </div>
+
+        <div class="question-group">
+            <label>3. What do you do for a living?</label><br>
+            <input type="radio" name="answer3"> A. Chairman<br>
+            <input type="radio" name="answer3"> B. Carpenter<br>
+            <input type="radio" name="answer3"> C. Construction Worker<br>
+            <input type="radio" name="answer3"> D. Contractor<br>
+        </div>
+
+        <hr>
+
+        <div class="checkbox-group">
+            <label>Where do you watch movies?</label><br>
+            <input type="checkbox"> Netflix<br>
+            <input type="checkbox"> YouTube<br>
+            <input type="checkbox"> CornHub<br>
+        </div>
+
+        <div class="checkbox-group">
+            <label>Favorite Genre?</label><br>
+            <input type="checkbox"> Drama<br>
+            <input type="checkbox"> Action<br>
+            <input type="checkbox"> Anime<br>
+        </div>
+
+        <div class="checkbox-group">
+            <label>Favorite Sport?</label><br>
+            <input type="checkbox"> Basketball<br>
+            <input type="checkbox"> Volleyball<br>
+            <input type="checkbox"> Badminton<br>
+        </div>
+
+        <br><br>
+
+        <input type="submit" value="Submit Quiz">
+    </form> 
+</body>
+</html>
